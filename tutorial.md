@@ -1,10 +1,18 @@
+
+# Tutorial: Aprendiendo Git con un Proyecto Real (Landing Page con Bootstrap 5)
+
 ## 1. Introducción
-- **Objetivo del ejercicio:** Aprender a usar Git y GitHub trabajando con ramas y fusiones en un proyecto real usando Visual Studio Code.
-- **Qué aprenderás:**
-	- Inicializar un repositorio
-	- Crear y trabajar con ramas
-	- Hacer merges y resolver conflictos
-	- Documentar el proceso
+
+Este tutorial te guiará paso a paso para aprender Git y GitHub usando Visual Studio Code, aplicando buenas prácticas de trabajo con ramas, fusiones y resolución de conflictos en un proyecto real: una landing page con Bootstrap 5.
+
+### Objetivo del ejercicio
+- Aprender a usar Git y GitHub trabajando con ramas y fusiones en un proyecto real usando Visual Studio Code.
+
+### Qué aprenderás
+- Inicializar un repositorio
+- Crear y trabajar con ramas
+- Hacer merges y resolver conflictos
+- Documentar el proceso
 
 ## 2. Creación del Repositorio
 - Crear un repositorio en GitHub llamado `demo-git-branches` (sin inicializar con README).
@@ -49,7 +57,7 @@
 	git push
 	```
 
-## 4. Trabajo con Ramas
+## 4. Trabajo con Ramas y Funcionalidades
 
 ### 4.1. Crear y cambiar de rama
 - Crear una nueva rama para cada funcionalidad:
@@ -57,7 +65,7 @@
 	git checkout -b nombre-de-la-rama
 	```
 
-### 4.2. Ejercicio práctico por ramas
+### 4.2. Ejercicios prácticos por ramas
 
 - **Rama navbar:**
 	- Crear la rama:
@@ -139,7 +147,7 @@
 		git push
 		```
 
-## 4.3. Eliminación de ramas después de fusionar
+### 4.3. Eliminación de ramas después de fusionar
 
 Una vez que una rama de funcionalidad (por ejemplo, `navbar`, `footer` o `cards`) ha sido fusionada exitosamente en la rama principal (`main`), es recomendable eliminarla para mantener el repositorio limpio y organizado.
 
@@ -158,11 +166,11 @@ Esto no afecta el historial ni los cambios ya fusionados. Es una buena práctica
 
 ## 5. Resolución de conflictos de merge
 
-### ¿Cómo se provoca un conflicto?
+### 5.1 ¿Cómo se provoca un conflicto?
 
 Un conflicto de merge ocurre cuando dos ramas modifican la misma línea de un archivo de forma diferente. Por ejemplo, si en la rama `main` y en la rama `cards` se edita el mismo título en `index.html` y luego se intenta fusionar, Git no sabe cuál versión conservar y marca el conflicto.
 
-### ¿Cómo se ve un conflicto?
+### 5.2 ¿Cómo se ve un conflicto?
 
 Al hacer el merge, Git inserta marcas especiales en el archivo afectado:
 
@@ -178,7 +186,7 @@ Al hacer el merge, Git inserta marcas especiales en el archivo afectado:
 - `=======`: Separa los cambios de ambas ramas.
 - `>>>>>>> nombre-de-la-rama`: Indica el final del conflicto y muestra el nombre de la rama que se está fusionando (por ejemplo, cards).
 
-### ¿Cómo se resuelve?
+### 5.3 ¿Cómo se resuelve?
 
 1. Abre el archivo con conflicto (por ejemplo, `index.html`).
 2. Elige el contenido que deseas conservar (puedes combinar ambos si lo prefieres) y elimina las marcas `<<<<<<<`, `=======`, `>>>>>>>`.
@@ -195,7 +203,19 @@ Al hacer el merge, Git inserta marcas especiales en el archivo afectado:
 
 Así se resuelven los conflictos y se continúa con el flujo de trabajo en Git.
 
-### Resolución de conflictos múltiples
+### 5.4 Resolución de conflictos múltiples
+---
+
+## 6. Recomendaciones finales
+
+- Trabaja siempre en ramas para cada nueva funcionalidad o mejora.
+- Haz commits descriptivos y frecuentes.
+- Elimina ramas que ya no uses después de fusionarlas.
+- Haz pull antes de mergear para evitar conflictos innecesarios.
+- Si surge un conflicto, léelo con calma, elige el contenido correcto y documenta la solución.
+- Mantén tu documentación (como este tutorial) actualizada para futuras referencias.
+
+¡Felicidades! Ahora tienes una base sólida para trabajar con Git y GitHub en proyectos reales.
 
 También pueden ocurrir conflictos en varias líneas o secciones de un archivo al mismo tiempo. Por ejemplo, si en la rama `main` y en la rama `footer` se editan tanto el título principal como el texto del footer, al hacer merge aparecerán varias zonas de conflicto en el archivo:
 
