@@ -194,3 +194,35 @@ Al hacer el merge, Git inserta marcas especiales en el archivo afectado:
 	```
 
 Así se resuelven los conflictos y se continúa con el flujo de trabajo en Git.
+
+### Resolución de conflictos múltiples
+
+También pueden ocurrir conflictos en varias líneas o secciones de un archivo al mismo tiempo. Por ejemplo, si en la rama `main` y en la rama `footer` se editan tanto el título principal como el texto del footer, al hacer merge aparecerán varias zonas de conflicto en el archivo:
+
+```
+<<<<<<< HEAD
+<línea o bloque de la rama actual>
+=======
+<línea o bloque de la rama que se está fusionando>
+>>>>>>> nombre-de-la-rama
+```
+
+Debes revisar cada zona de conflicto, elegir el contenido que deseas conservar (puedes combinar ambos si lo prefieres) y eliminar todas las marcas `<<<<<<<`, `=======`, `>>>>>>>`.
+
+Por ejemplo, puedes dejar:
+
+```html
+<h1 class="mt-5">Landing Page con Cambios en Main y Footer Personalizado</h1>
+...
+<p class="mb-0">&copy; 2025 DemoGit. Footer combinado de main y footer.</p>
+```
+
+Después, guarda el archivo, marca el conflicto como resuelto y haz commit:
+
+```bash
+git add index.html
+git commit -m "Resuelve conflictos múltiples entre main y footer"
+git push
+```
+
+Así se resuelven conflictos en varias secciones al mismo tiempo.
