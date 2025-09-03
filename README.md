@@ -204,18 +204,6 @@ Al hacer el merge, Git inserta marcas especiales en el archivo afectado:
 Así se resuelven los conflictos y se continúa con el flujo de trabajo en Git.
 
 ### 5.4 Resolución de conflictos múltiples
----
-
-## 6. Recomendaciones finales
-
-- Trabaja siempre en ramas para cada nueva funcionalidad o mejora.
-- Haz commits descriptivos y frecuentes.
-- Elimina ramas que ya no uses después de fusionarlas.
-- Haz pull antes de mergear para evitar conflictos innecesarios.
-- Si surge un conflicto, léelo con calma, elige el contenido correcto y documenta la solución.
-- Mantén tu documentación (como este tutorial) actualizada para futuras referencias.
-
-¡Felicidades! Ahora tienes una base sólida para trabajar con Git y GitHub en proyectos reales.
 
 También pueden ocurrir conflictos en varias líneas o secciones de un archivo al mismo tiempo. Por ejemplo, si en la rama `main` y en la rama `footer` se editan tanto el título principal como el texto del footer, al hacer merge aparecerán varias zonas de conflicto en el archivo:
 
@@ -246,3 +234,22 @@ git push
 ```
 
 Así se resuelven conflictos en varias secciones al mismo tiempo.
+
+---
+
+## 6. Recomendaciones finales
+
+- Trabaja siempre en ramas para cada nueva funcionalidad o mejora.
+- Haz commits descriptivos y frecuentes.
+- Elimina ramas que ya no uses después de fusionarlas.
+- Haz pull antes de mergear para evitar conflictos innecesarios.
+- Si surge un conflicto, léelo con calma, elige el contenido correcto y documenta la solución.
+- Mantén tu documentación (como este tutorial) actualizada para futuras referencias.
+
+¡Felicidades! Ahora tienes una base sólida para trabajar con Git y GitHub en proyectos reales.
+
+---
+
+## Conclusión
+
+Este ejercicio práctico te ha permitido experimentar el flujo de trabajo profesional con Git y GitHub: crear ramas, fusionar cambios, resolver conflictos y mantener una documentación clara. Dominar estos conceptos te ayudará a colaborar mejor en proyectos reales, evitar errores comunes y mantener un historial limpio y comprensible. Recuerda que la práctica constante y la documentación de tu proceso son clave para seguir mejorando como desarrollador.
