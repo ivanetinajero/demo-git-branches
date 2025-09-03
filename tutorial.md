@@ -99,6 +99,46 @@
 		git push
 		```
 
+- **Rama cards:**
+	- Crear la rama:
+		```bash
+		git checkout -b cards
+		```
+	- Agregar el código de la sección de tarjetas (cards) en `index.html`.
+	- Guardar y hacer commit:
+		```bash
+		git add index.html
+		git commit -m "Agrega sección de tarjetas (cards) de Bootstrap"
+		git push -u origin cards
+		```
+	- Fusionar en main:
+		```bash
+		git checkout main
+		git pull
+		git merge cards
+		git push
+		```
+
+- **Rama contacto:**
+	- Crear la rama:
+		```bash
+		git checkout -b contacto
+		```
+	- Agregar el código del formulario de contacto en `index.html`.
+	- Guardar y hacer commit:
+		```bash
+		git add index.html
+		git commit -m "Agrega formulario de contacto de Bootstrap"
+		git push -u origin contacto
+		```
+	- Fusionar en main:
+		```bash
+		git checkout main
+		git pull
+		git merge contacto
+		git push
+		```
+
 ## 4.3. Eliminación de ramas después de fusionar
 
 Una vez que una rama de funcionalidad (por ejemplo, `navbar`, `footer` o `cards`) ha sido fusionada exitosamente en la rama principal (`main`), es recomendable eliminarla para mantener el repositorio limpio y organizado.
