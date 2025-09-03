@@ -155,3 +155,42 @@ Una vez que una rama de funcionalidad (por ejemplo, `navbar`, `footer` o `cards`
 	```
 
 Esto no afecta el historial ni los cambios ya fusionados. Es una buena práctica profesional y ayuda a evitar confusiones con ramas antiguas o innecesarias.
+
+## 5. Resolución de conflictos de merge
+
+### ¿Cómo se provoca un conflicto?
+
+Un conflicto de merge ocurre cuando dos ramas modifican la misma línea de un archivo de forma diferente. Por ejemplo, si en la rama `main` y en la rama `cards` se edita el mismo título en `index.html` y luego se intenta fusionar, Git no sabe cuál versión conservar y marca el conflicto.
+
+### ¿Cómo se ve un conflicto?
+
+Al hacer el merge, Git inserta marcas especiales en el archivo afectado:
+
+```
+<<<<<<< HEAD
+<línea o bloque de la rama actual>
+=======
+<línea o bloque de la rama que se está fusionando>
+>>>>>>> nombre-de-la-rama
+```
+
+- `<<<<<<< HEAD`: Indica el inicio de la sección en conflicto, mostrando el contenido de la rama actual (por ejemplo, main).
+- `=======`: Separa los cambios de ambas ramas.
+- `>>>>>>> nombre-de-la-rama`: Indica el final del conflicto y muestra el nombre de la rama que se está fusionando (por ejemplo, cards).
+
+### ¿Cómo se resuelve?
+
+1. Abre el archivo con conflicto (por ejemplo, `index.html`).
+2. Elige el contenido que deseas conservar (puedes combinar ambos si lo prefieres) y elimina las marcas `<<<<<<<`, `=======`, `>>>>>>>`.
+3. Guarda el archivo.
+4. Marca el conflicto como resuelto y haz commit:
+	```bash
+	git add index.html
+	git commit -m "Resuelve conflicto de merge entre main y cards"
+	```
+5. Sube los cambios:
+	```bash
+	git push
+	```
+
+Así se resuelven los conflictos y se continúa con el flujo de trabajo en Git.
